@@ -22,7 +22,6 @@ class ProductViewSet(ModelViewSet):
     ordering_fields = ["product_price"]
     ordering = ["product_price"]
 
-
     def get_queryset(self):
         if self.action == 'list':
             category_slug = self.request.query_params.get('category')
